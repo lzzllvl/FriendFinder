@@ -1,0 +1,19 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "An Application for finding the closest match from users",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzzllvl/FriendFinder.git"
+  },
+  "author": "Gregory Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lzzllvl/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/lzzllvl/FriendFinder#readme"
+}
