@@ -8,7 +8,15 @@ var apiRoutes = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
+
     var currentUser = req.body;
+
+
+    //this section is a little weird, it's to maintain formatting.
+    currentUser.scores = currentUser['scores[]'];
+    delete currentUser['scores[]']; // I'm not sure why the post is changing the object in this way
+    currentUser.scores = currentUser.scores.map(Number);
+
     friends.getUserArray();//this sets the user object array from current JSON file
     var suggestion = friends.findNearestNeighbor(currentUser);
     // var suggestion = friends.findNearestNeighborEuclidean(currentUser);
@@ -18,3 +26,5 @@ var apiRoutes = function(app) {
     res.json(JSON.stringify(suggestion));//send back to client for modal
   });
 }
+
+module.exports = apiRoutes;
