@@ -1,7 +1,7 @@
 //serverFTW
 const express = require('express');
 const bodyParser = require('body-parser');
-const PORT = 8080;
+const PORT = process.env.PORt || 8080;
 
 const app = express();
 
