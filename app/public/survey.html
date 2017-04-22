@@ -164,7 +164,10 @@
       ]
     };
     $.post("/api/friends", submission, (data) => {
-      console.log(data);
+      data = JSON.parse(data);
+      var name = data.name
+      var logStr = `Looks Like ${name} Hates The Same Things You Do`;
+      alert(logStr);
     });
   })
 

@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-//this module will use a JSON file to write and read the users information;
+//this module will use a JSON file (substitute for a database)
+//to write and read the users information;
 
 module.exports = {
   getUserArray: function() {
